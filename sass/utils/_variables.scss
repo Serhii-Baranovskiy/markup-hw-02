@@ -1,0 +1,16 @@
+$main-font-size: 16px;
+$main-letter-spacing: 0.03em;
+$main-font-family: Roboto;
+$secondary-font-family: sans-serif;
+
+$colors: (
+    'main-color-text': #212121,
+    'secondary-color-text': #757575,
+    'accent-color': #2196F3,
+    'back-ground-footer': #2F303A,
+    'back-ground-team': #F5F4FA,
+);
+
+@function getColor($key) {
+    @return map-get($colors, $key);
+}
