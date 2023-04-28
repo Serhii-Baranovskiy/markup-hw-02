@@ -1,0 +1,7 @@
+.section-fooret {
+    background-color: getColor('back-ground-footer');
+
+    & .container {
+            display: flex;
+        }
+}
