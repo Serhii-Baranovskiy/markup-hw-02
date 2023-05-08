@@ -57,7 +57,7 @@
     margin-top: 0;
     margin-bottom: 0;
 
-    color: var(--first-color);
+    color: getColor('main-color-text');
 
     font-size: 18px;
     line-height: 2;
@@ -68,7 +68,7 @@
     margin-top: 0;
     margin-bottom: 0;
 
-    color: var(--second-color);
+    color: getColor('secondary-color-text');
 
     line-height: 1.87;
 }
