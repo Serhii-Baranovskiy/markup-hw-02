@@ -1,7 +1,13 @@
 .section-fooret {
     background-color: getColor('back-ground-footer');
+    text-align: center;
 
     & .container {
+        padding-bottom: 60px;
+        
+        @media screen and (min-width: 1200px) {
             display: flex;
         }
+            
+    }
 }

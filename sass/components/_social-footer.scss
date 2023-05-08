@@ -1,6 +1,10 @@
 .footer-social,
 .footer-form {
-    margin-top: 72px;
+    margin-top: 60px;
+
+    @media screen and (min-width: 1200px) {
+        margin-top: 72px;
+    }
 }
 
 .footer-social__title {
@@ -15,10 +19,12 @@
 
 .block-social {
     display: flex;
+    justify-content: center;
     margin-top: 20px;
 }
 
 .block-social__item {
+    width: 44px;
     border-radius: 50%;
 
     background: rgba(255, 255, 255, 0.1);
@@ -33,7 +39,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 44px;
     height: 44px;
     border-radius: 50%;
 

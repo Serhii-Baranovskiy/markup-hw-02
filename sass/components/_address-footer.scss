@@ -1,7 +1,11 @@
 .footer-address {
-    margin-right: 70px;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    padding-top: 60px;
+    
+    @media screen and (min-width: 1200px) {
+        margin-right: 70px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
 }
 
 .logo__changes {
@@ -10,7 +14,11 @@
 }
 
 .block-address {
-    width: 231px;
+    
+    @media screen and (min-width: 1200px) {
+        width: 231px;
+    }
+    
     margin-top: 20px;
 
     font-style: normal;
