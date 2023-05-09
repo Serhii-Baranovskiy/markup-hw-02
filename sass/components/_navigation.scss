@@ -1,6 +1,11 @@
 .container-nav{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+.block-nav{
+    display: none;
 }
 
 .nav__list{
@@ -52,4 +57,17 @@
     
         background-color: getColor('accent-color');
     }
+}
+
+.mobile-menu{
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.icon-menu{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    fill: black;
 }

@@ -16,30 +16,48 @@
 
             <a href="./index.html" class="link logo">Web<span class="logo__color-word">Studio</span></a>
             
-            <nav class="nav">
-                <ul class="list nav__list">
-                    <li class="nav__item"><a href="./index.html" class="link nav__navigation nav__active-page">Студія</a></li>
-                    <li class="nav__item"><a href="./portfolio.html" class="link nav__navigation">Портфоліо</a></li>
-                    <li class="nav__item"><a href="" class="link nav__navigation">Контакти</a></li>
+            <div class="block-nav">
+                <nav class="nav">
+                    <ul class="list nav__list">
+                        <li class="nav__item"><a href="./index.html" class="link nav__navigation nav__active-page">Студія</a></li>
+                        <li class="nav__item"><a href="./portfolio.html" class="link nav__navigation">Портфоліо</a></li>
+                        <li class="nav__item"><a href="" class="link nav__navigation">Контакти</a></li>
+                    </ul>
+                </nav>
+    
+                <ul class="list header-address">
+                    <li class="header-address__item">
+                        <a href="mailto:info@devstudio.com" class="link header-address__title">
+                            <svg class="header-address__icon header-address__icon--size-mail">
+                                <use href="./images/symbol-icon.svg#icon-mail"></use>
+                            </svg>
+                            info@devstudio.com</a>
+                    </li>
+                    <li class="header-address__item">
+                        <a href="tel:+380961111111" class="link header-address__title">
+                            <svg class="header-address__icon header-address__icon--size-phone">
+                                <use href="./images/symbol-icon.svg#icon-smartphone"></use>
+                            </svg>
+                            +38 096 111 11 11</a>
+                    </li>
                 </ul>
-            </nav>
-
-            <ul class="list header-address">
-                <li class="header-address__item">
-                    <a href="mailto:info@devstudio.com" class="link header-address__title">
-                        <svg class="header-address__icon header-address__icon--size-mail">
-                            <use href="./images/symbol-icon.svg#icon-mail"></use>
-                        </svg>
-                        info@devstudio.com</a>
-                </li>
-                <li class="header-address__item">
-                    <a href="tel:+380961111111" class="link header-address__title">
-                        <svg class="header-address__icon header-address__icon--size-phone">
-                            <use href="./images/symbol-icon.svg#icon-smartphone"></use>
-                        </svg>
-                        +38 096 111 11 11</a>
-                </li>
-            </ul>
+            </div>
+            <div class="mobile-menu">
+                <button
+                    class="menu-toggle js-open-menu"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu"
+                >
+                    <svg class="icon-menu">
+                        <use href="./images/symbol-icon.svg#icon-menu-mobile"></use>
+                    </svg>
+                </button>
+                <button class="menu-toggle js-close-menu">
+                    <svg class="icon-menu">
+                        <use href="./images/symbol-icon.svg#icon-close-mobile"></use>
+                    </svg>
+                </button>
+            </div>
 
         </div>
     </header>
@@ -188,7 +206,11 @@
 
                 <ul class="list block-team">
                     <li class="block-team__item">
-                        <img src="./images/img-1.jpg" alt="Ігор Дем'яненко" width="270">
+                        <img 
+                            srcset="./images/img-1.jpg 1x, ./images/img-1@2x.jpg 2x"
+                            src="./images/img-1.jpg" 
+                            alt="Ігор Дем'яненко"
+                        >
                         <h3 class="block-team__name">Ігор Дем'яненко</h3>
                         <p lang="en" class="block-team__position">Product Designer</p>
 
@@ -228,7 +250,11 @@
                     </li>
 
                     <li class="block-team__item">
-                        <img src="./images/img-2.jpg" alt="Ольга Рєпіна" width="270">
+                        <img 
+                            srcset="./images/img-2.jpg 1x, ./images/img-2@2x.jpg 2x"
+                            src="./images/img-2.jpg" 
+                            alt="Ольга Рєпіна"
+                        >
                         <h3 class="block-team__name">Ольга Рєпіна</h3>
                         <p lang="en" class="block-team__position">Frontend Developer</p>
 
@@ -268,7 +294,11 @@
                     </li>
 
                     <li class="block-team__item">
-                        <img src="./images/img-3.jpg" alt="Микола Тарасов" width="270">
+                        <img 
+                            srcset="./images/img-3.jpg 1x, ./images/img-3@2x.jpg 2x"
+                            src="./images/img-3.jpg" 
+                            alt="Микола Тарасов"
+                        >
                         <h3 class="block-team__name">Микола Тарасов</h3>
                         <p lang="en" class="block-team__position">Marketing</p>
 
@@ -308,7 +338,11 @@
                     </li>
                     
                     <li class="block-team__item">
-                        <img src="./images/img-4.jpg" alt="Михайло Єрмаков" width="270">
+                        <img 
+                            srcset="./images/img-4.jpg 1x, ./images/img-4@2x.jpg 2x"
+                            src="./images/img-4.jpg" 
+                            alt="Михайло Єрмаков"
+                        >
                         <h3 class="block-team__name">Михайло Єрмаков</h3>
                         <p lang="en" class="block-team__position">UI Designer</p>
 
@@ -470,5 +504,6 @@
         </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>
