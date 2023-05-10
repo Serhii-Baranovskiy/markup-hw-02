@@ -1,15 +1,35 @@
 .mobile-menu{
-    display: none;
-}
-
-.mobile-menu.is-open {
-    display: block;
     position: absolute;
-    top: 60px;
+    z-index: 1;
+    top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     background-color: #FFFFFF;
+
+    transform: translateX(100%);
+    transition: 250ms transform linear;
+}
+
+.mobile-menu.is-open {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: #FFFFFF;
+
+    transform: translateX(0px);
+    transition: 250ms transform linear;
 }
 
 .mobile-nav__navigation{
@@ -40,10 +60,19 @@
     color: getColor('accent-color');
 }
 
+.mobile-address{
+    margin-bottom: 48px;
+}
+
 .mobile-header-address__item:first-child {
     font-weight: 500;
     font-size: 34px;
     line-height: 1.17;
+
+    & .mobile-header-address__title{
+        color: #2196F3;
+    }
+    
 }
 
 .mobile-header-address__item:last-child{
@@ -58,8 +87,6 @@
 .mobile-header-address__title {
     display: flex;
     align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
     padding-left: 40px;
 
     color: getColor('secondary-color-text');
@@ -79,8 +106,16 @@
     margin-left: 40px;
 }
 
-.mobile-header-social__list-social:not(:last-child){
-    margin-right: 20px;
+.mobile-header-social__list-social{
+    padding: 0 10px;
+
+    &:not(:first-child) {
+        border-left: 1px solid rgba(33, 33, 33, 0.2);
+    }
+
+    &:first-child{
+        padding-left: 0px;
+    }
 }
 
 .mobile-header-social__link-social{
@@ -93,6 +128,7 @@
 
 .btn-menu {
     position: relative;
+    z-index: 2;
     width: 40px;
     height: 40px;
     display: flex;
@@ -105,21 +141,21 @@
     @media screen and (min-width: 480px) {
         display: none;
     }
+
+    &.is-open .btn-menu__icon-menu {
+        display: none;
+    }
+
+    &.is-open .btn-menu__icon-cross {
+        display: block;
+    }
 }
 
 .btn-menu__svg {
     width: 40px;
     height: 40px;
-}
 
-.btn-menu__svg .btn-menu__icon-cross {
-    display: none;
-}
-
-.btn-menu.is-open .btn-menu__icon-menu {
-    display: none;
-}
-
-.btn-menu.is-open .btn-menu__icon-cross {
-    display: block;
+    & .btn-menu__icon-cross {
+        display: none;
+    }
 }
