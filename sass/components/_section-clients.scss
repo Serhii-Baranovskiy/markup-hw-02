@@ -14,18 +14,23 @@
 }
 
 .block-clients {
+    display: flex;
 
-    @media screen and (max-width: 479px){
+    @media screen and (max-width: 900px){
         flex-wrap: wrap;
         justify-content: center;
         margin: -15px;
     }
-    display: flex;
+    
 }
 
 .block-clients__item{
     margin: 15px;
     width: calc((100% - 60px) / 2);
+
+    @media screen and (min-width: 480px) and (max-width: 900px) {
+        width: calc((100% - 90px) / 3);
+    }
 
     &:not(:last-child) {
     

@@ -7,6 +7,17 @@
     }
 }
 
+.footer-social{
+
+    @media screen and (min-width: 480px) and (max-width: 900px) {
+        width: calc(100% / 2);
+    }
+
+    @media screen and (min-width: 901px) and (max-width: 1199px) {
+        width: calc(100% / 3);
+    }
+}
+
 .footer-social__title {
     display: inline;
     font-weight: 700;

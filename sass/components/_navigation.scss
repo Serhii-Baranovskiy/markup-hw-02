@@ -6,15 +6,29 @@
 
 .block-nav{
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 479px) {
         display: none;
+    }
+
+    @media screen and (min-width: 480px) {
+        display: flex;
+    }
+
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+        display: flex;
+        width: 100%;
     }
     
 }
 
 .nav__list{
+
+    @media screen and (min-width: 480px) and (max-width: 1199px){
+        display: flex;
+        margin-left: 88px;
+    }
     
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 1200px) {
         display: flex;
         margin-left: 93px;
     }

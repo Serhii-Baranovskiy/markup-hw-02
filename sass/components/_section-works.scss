@@ -1,6 +1,6 @@
 .section-works {
 
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: 769px) {
         display: none;
     }
 
@@ -43,7 +43,7 @@
     line-height: 1.16;
 
     position: absolute;
-    bottom: 5px;
+    bottom: 0;
 
     background: rgba(47, 48, 58, 0.8);
     color: #FFFFFF;

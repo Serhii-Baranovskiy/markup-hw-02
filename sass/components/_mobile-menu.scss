@@ -1,18 +1,5 @@
 .mobile-menu{
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    background-color: #FFFFFF;
-
-    transform: translateX(100%);
-    transition: 250ms transform linear;
+    display: none;
 }
 
 .mobile-menu.is-open {
@@ -103,6 +90,7 @@
 
 .mobile-header-social {
     display: flex;
+    flex-wrap: wrap;
     margin-left: 40px;
 }
 
@@ -148,6 +136,15 @@
 
     &.is-open .btn-menu__icon-cross {
         display: block;
+    }
+
+    &:hover{
+        cursor: pointer;
+    }
+
+    &:hover .btn-menu__icon-cross,
+    &:focus .btn-menu__icon-cross{
+        fill: #2196F3;
     }
 }
 

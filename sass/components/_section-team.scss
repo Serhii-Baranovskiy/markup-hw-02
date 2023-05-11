@@ -18,7 +18,12 @@
 
 .block-team {
 
-    @media screen and (min-width: 768px){
+    @media screen and (min-width: 480px) and (max-width: 950px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: 951px) {
         display: flex;
     }
     
@@ -30,16 +35,37 @@
 
     background-color: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-}
 
-.block-team__item:not(:last-child) {
-    margin-bottom: 30px;
+    &:not(:last-child) {
 
-    @media screen and (min-width: 1200px){
-        margin-right: 30px;
-    }
+        @media screen and (max-width: 480px) {
+            margin-bottom: 30px;
+        }
     
+        @media screen and (min-width: 951px){
+            margin-right: 30px;
+        }
+    
+    }
+
+    &:nth-child(2n+1){
+        @media screen and (min-width: 480px) and (max-width: 950px){
+            margin-right: 30px;
+        }
+        
+    }
+
+    @media screen and (min-width: 480px) and (max-width: 950px) {
+        width: calc((100% - 30px) / 2);
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 951px) {
+        width: calc((100% - 30px) / 4);
+    }
 }
+
+
 
 .block-team__name {
     font-weight: 500;

@@ -4,8 +4,13 @@
 
     & .container {
         padding-bottom: 60px;
+
+        @media screen and (min-width: 480px) and (max-width: 900px) {
+            display: flex;
+            flex-wrap: wrap;
+        }
         
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: 769px) {
             display: flex;
         }
             
