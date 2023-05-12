@@ -6,29 +6,35 @@
 
 .block-nav{
 
-    @media screen and (max-width: 479px) {
+    @media screen and (max-width: 600px) {
         display: none;
     }
 
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 601px) {
         display: flex;
     }
 
-    @media screen and (min-width: 480px) and (max-width: 1199px) {
+    @media screen and (min-width: 601px) {
         display: flex;
         width: 100%;
     }
     
 }
 
+.nav{
+
+    @media screen and (min-width: 601px) and (max-width: 768px){
+        margin-left: auto;
+    }
+}
+
 .nav__list{
 
-    @media screen and (min-width: 480px) and (max-width: 1199px){
+    @media screen and (min-width: 601px) and (max-width: 768px){
         display: flex;
-        margin-left: 88px;
     }
     
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 769px) {
         display: flex;
         margin-left: 93px;
     }
@@ -36,6 +42,11 @@
 
 .nav__item:not(:last-child){
     margin-right: 50px;
+
+    @media screen and (min-width: 601px) and (max-width: 640px){
+        margin-right: 20px;
+    }
+    
 }
 
 .nav__navigation{
