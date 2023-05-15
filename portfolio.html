@@ -16,30 +16,82 @@
 
             <a href="./index.html" class="link logo">Web<span class="logo__color-word">Studio</span></a>
             
-            <nav class="nav">
-                <ul class="list nav__list">
-                    <li class="nav__item"><a href="./index.html" class="link nav__navigation">Студія</a></li>
-                    <li class="nav__item"><a href="./portfolio.html" class="link nav__navigation nav__active-page">Портфоліо</a></li>
-                    <li class="nav__item"><a href="" class="link nav__navigation">Контакти</a></li>
-                </ul>
-            </nav>
+            <div class="block-nav">
+                <nav class="nav">
+                    <ul class="list nav__list">
+                        <li class="nav__item"><a href="./index.html" class="link nav__navigation">Студія</a></li>
+                        <li class="nav__item"><a href="./portfolio.html" class="link nav__navigation nav__active-page">Портфоліо</a></li>
+                        <li class="nav__item"><a href="" class="link nav__navigation">Контакти</a></li>
+                    </ul>
+                </nav>
 
-            <ul class="list header-address">
-                <li class="header-address__item">
-                    <a href="mailto:info@devstudio.com" class="link header-address__title">
-                        <svg class="header-address__icon header-address__icon--size-mail">
-                            <use href="./images/symbol-icon.svg#icon-mail"></use>
-                        </svg>
-                        info@devstudio.com</a>
-                </li>
-                <li class="header-address__item">
-                    <a href="tel:+380961111111" class="link header-address__title">
-                        <svg class="header-address__icon header-address__icon--size-phone">
-                            <use href="./images/symbol-icon.svg#icon-smartphone"></use>
-                        </svg>
-                        +38 096 111 11 11</a>
-                </li>
-            </ul>
+                <ul class="list header-address">
+                    <li class="header-address__item">
+                        <a href="mailto:info@devstudio.com" class="link header-address__title">
+                            <svg class="header-address__icon header-address__icon--size-mail">
+                                <use href="./images/symbol-icon.svg#icon-mail"></use>
+                            </svg>
+                            info@devstudio.com</a>
+                    </li>
+                    <li class="header-address__item">
+                        <a href="tel:+380961111111" class="link header-address__title">
+                            <svg class="header-address__icon header-address__icon--size-phone">
+                                <use href="./images/symbol-icon.svg#icon-smartphone"></use>
+                            </svg>
+                            +38 096 111 11 11</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mobile-menu" data-menu>
+                <nav class="mobile-nav">
+                    <ul class="list mobile-nav__list">
+                        <li class="mobile-nav__item"><a href="./index.html" class="link mobile-nav__navigation mobile-nav__active-page">Студія</a></li>
+                        <li class="mobile-nav__item"><a href="./portfolio.html" class="link mobile-nav__navigation">Портфоліо</a></li>
+                        <li class="mobile-nav__item"><a href="" class="link mobile-nav__navigation">Контакти</a></li>
+                    </ul>
+                </nav>
+
+                <div class="mobile-address">
+                    <ul class="list mobile-header-address">
+                        <li class="mobile-header-address__item">
+                            <a href="tel:+380961111111" 
+                                class="link mobile-header-address__title">
+                                +38 096 111 11 11</a>
+                        </li>
+                        <li class="mobile-header-address__item">
+                            <a href="mailto:info@devstudio.com" 
+                                class="link mobile-header-address__title">
+                                info@devstudio.com</a>
+                        </li>
+                    </ul>
+
+                    <ul class="list mobile-header-social">
+                        <li class="mobile-header-social__list-social">
+                            <a href="" class="link mobile-header-social__link-social">Instagram</a>
+                        </li>
+                        <li class="mobile-header-social__list-social">
+                            <a href="" class="link mobile-header-social__link-social">Twitter</a>
+                        </li>
+                        <li class="mobile-header-social__list-social">
+                            <a href="" class="link mobile-header-social__link-social">Facebook</a>
+                        </li>
+                        <li class="mobile-header-social__list-social">
+                            <a href="" class="link mobile-header-social__link-social">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <button
+                class="btn-menu"
+                aria-expanded="false"
+                data-menu-button>
+                <svg class="btn-menu__svg" aria-label="Перемикач мобільного меню">
+                    <use class="btn-menu__icon-menu" href="./images/symbol-icon.svg#icon-menu-mobile"></use>
+                    <use class="btn-menu__icon-cross" href="./images/symbol-icon.svg#icon-close-mobile"></use>
+                </svg>
+            </button>
 
         </div>
     </header>
@@ -60,7 +112,13 @@
                     <li class="project__item">
                         <a href="" class="link">
                             <div class="project__block-image">
-                                <img src="./images/ptf-1.jpg" alt="Ноутбук з відкритим сайтом" width="370">
+                                <picture>
+                                    <source srcset="./images/ptf-tablet-1.jpg 1x, ./images/ptf-tablet-1@2x.jpg 2x" media="(min-width:481px)">
+                                    <source srcset="./images/ptf-tablet-1.jpg 1x, ./images/ptf-tablet-1@2x.jpg 2x" media="(max-width:768px)">
+                                    <img 
+                                        src="./images/ptf-desktop-1.jpg" 
+                                        alt="Ноутбук з відкритим сайтом">
+                                </picture>
                                 <div class="project__overlay">
                                     <p class="project__overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                                 </div>
@@ -75,7 +133,10 @@
                     <li class="project__item">
                         <a href="" class="link">
                             <div class="project__block-image">
-                                <img src="./images/ptf-2.jpg" alt="Два гравці грають в баскетбол" width="370">
+                                <img 
+                                    srcset="./images/ptf-2.jpg 1x, ./images/ptf-2@2x.jpg 2x"
+                                    src="./images/ptf-2.jpg" 
+                                    alt="Два гравці грають в баскетбол">
                                 <div class="project__overlay">
                                     <p class="project__overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                                 </div>
@@ -90,7 +151,10 @@
                     <li class="project__item">
                         <a href="" class="link">
                             <div class="project__block-image">
-                                <img src="./images/ptf-3.jpg" alt="Логотип ресторану" width="370">
+                                <img 
+                                    srcset="./images/ptf-3.jpg 1x, ./images/ptf-3@2x.jpg 2x"
+                                    src="./images/ptf-3.jpg" 
+                                    alt="Логотип ресторану" >
                                 <div class="project__overlay">
                                     <p class="project__overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                                 </div>
@@ -105,7 +169,10 @@
                     <li class="project__item">
                         <a href="" class="link">
                             <div class="project__block-image">
-                                <img src="./images/ptf-4.jpg" alt="Навушники" width="370">
+                                <img 
+                                    srcset="./images/ptf-4.jpg 1x, ./images/ptf-4@2x.jpg 2x"
+                                    src="./images/ptf-4.jpg" 
+                                    alt="Навушники" >
                                 <div class="project__overlay">
                                     <p class="project__overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                                 </div>
@@ -120,7 +187,10 @@
                     <li class="project__item">
                         <a href="" class="link">
                             <div class="project__block-image">
-                                <img src="./images/ptf-5.jpg" alt="Коробки" width="370">
+                                <img 
+                                    srcset="./images/ptf-5.jpg 1x, ./images/ptf-5@2x.jpg 2x"
+                                    src="./images/ptf-5.jpg" 
+                                    alt="Коробки" >
                                 <div class="project__overlay">
                                     <p class="project__overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                                 </div>
@@ -135,7 +205,10 @@
                     <li class="project__item">
                         <a href="" class="link">
                             <div class="project__block-image">
-                                <img src="./images/ptf-6.jpg" alt="Монітор з відкритим сайтом" width="370">
+                                <img 
+                                    srcset="./images/ptf-6.jpg 1x, ./images/ptf-6@2x.jpg 2x"
+                                    src="./images/ptf-6.jpg" 
+                                    alt="Монітор з відкритим сайтом" >
                                 <div class="project__overlay">
                                     <p class="project__overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                                 </div>
@@ -150,7 +223,10 @@
                     <li class="project__item">
                         <a href="" class="link">
                             <div class="project__block-image">
-                                <img src="./images/ptf-7.jpg" alt="Журнал" width="370">
+                                <img 
+                                    srcset="./images/ptf-7.jpg 1x, ./images/ptf-7@2x.jpg 2x"
+                                    src="./images/ptf-7.jpg" 
+                                    alt="Журнал">
                                 <div class="project__overlay">
                                     <p class="project__overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                                 </div>
@@ -165,7 +241,10 @@
                     <li class="project__item">
                         <a href="" class="link">
                             <div class="project__block-image">
-                                <img src="./images/ptf-8.jpg" alt="Бірка" width="370">
+                                <img 
+                                srcset="./images/ptf-8.jpg 1x, ./images/ptf-8@2x.jpg 2x"
+                                src="./images/ptf-8.jpg" 
+                                alt="Бірка" >
                                 <div class="project__overlay">
                                     <p class="project__overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                                 </div>
@@ -180,7 +259,10 @@
                     <li class="project__item">
                         <a href="" class="link">
                             <div class="project__block-image">
-                                <img src="./images/ptf-9.jpg" alt="Друкує на ноутбуці" width="370">
+                                <img 
+                                srcset="./images/ptf-9.jpg 1x, ./images/ptf-9@2x.jpg 2x"
+                                src="./images/ptf-9.jpg" 
+                                alt="Друкує на ноутбуці" >
                                 <div class="project__overlay">
                                     <p class="project__overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                                 </div>
@@ -258,5 +340,6 @@
 
         </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>
