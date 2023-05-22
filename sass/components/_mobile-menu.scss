@@ -1,12 +1,8 @@
 .mobile-menu{
-    display: none;
-}
-
-.mobile-menu.is-open {
     position: absolute;
     z-index: 1;
     top: 0;
-    left: 0;
+    right: 100%;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -15,7 +11,11 @@
 
     background-color: #FFFFFF;
 
-    transform: translateX(0px);
+    transition: 250ms transform linear;
+}
+
+.mobile-menu.is-open {
+    transform: translateX(100%);
     transition: 250ms transform linear;
 }
 

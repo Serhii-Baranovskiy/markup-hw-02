@@ -285,14 +285,10 @@ img {
 }
 
 .mobile-menu {
-  display: none;
-}
-
-.mobile-menu.is-open {
   position: absolute;
   z-index: 1;
   top: 0;
-  left: 0;
+  right: 100%;
   width: 100vw;
   height: 100vh;
   display: -webkit-box;
@@ -306,8 +302,15 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #FFFFFF;
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
+  -webkit-transition: 250ms -webkit-transform linear;
+  transition: 250ms -webkit-transform linear;
+  transition: 250ms transform linear;
+  transition: 250ms transform linear, 250ms -webkit-transform linear;
+}
+
+.mobile-menu.is-open {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
   -webkit-transition: 250ms -webkit-transform linear;
   transition: 250ms -webkit-transform linear;
   transition: 250ms transform linear;
