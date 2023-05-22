@@ -559,8 +559,8 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
-  height: 581px;
+  width: 94%;
+  height: 609px;
   border-radius: 4px;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
@@ -579,6 +579,17 @@ img {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 480px) and (max-width: 900px) {
+  .modal-window {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 901px) {
+  .modal-window {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal-window__btn {
@@ -692,9 +703,9 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   color: #757575;
   font-size: 14px;
   line-height: 1.71;
@@ -702,6 +713,18 @@ img {
 }
 .form-modal__label-license:hover {
   cursor: pointer;
+}
+@media screen and (max-width: 900px) {
+  .form-modal__label-license {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 901px) {
+  .form-modal__label-license {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .form-modal__input-license {
@@ -740,6 +763,7 @@ img {
 }
 
 .form-modal__link-license {
+  padding-left: 5px;
   color: #2196F3;
 }
 
@@ -1518,6 +1542,26 @@ img {
   color: #FFFFFF;
   font-size: 18px;
   line-height: 1.55;
+}
+@media screen and (min-width: 481px) and (max-width: 600px) {
+  .project__overlay-text {
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 700px) {
+  .project__overlay-text {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 900px) {
+  .project__overlay-text {
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 901px) and (max-width: 1100px) {
+  .project__overlay-text {
+    font-size: 14px;
+  }
 }
 
 .project__description {
